@@ -493,7 +493,7 @@ void MainWindow::linija_linijski_rastavljaci(bool prorada){
 //prorada prekidaca
 void MainWindow::prorada_prekidaca_b(bool prorada){
     if(prorada){
-        ui->textBrowser->append("DV-B: Ukljucujem polje...");
+        ui->textBrowser->append("DV-B: se ukljucuje...");
 
         prekidac_gumb_b(true);
 
@@ -527,7 +527,7 @@ void MainWindow::prorada_prekidaca_b(bool prorada){
 
         ui->textBrowser->append("DV-B: Polje ukljuceno");
     } else {
-        ui->textBrowser->append("DV-B: Iskljucujem polje...");
+        ui->textBrowser->append("DV-B: se iskljucuje...");
 
         prekidac_gumb_b(false);
 
@@ -554,7 +554,7 @@ void MainWindow::prorada_prekidaca_b(bool prorada){
 
 void MainWindow::prorada_prekidaca_c(bool prorada){
     if(prorada){
-        ui->textBrowser->append("DV-C: Ukljucujem polje...");
+        ui->textBrowser->append("DV-C: se ukljucuje...");
 
         prekidac_gumb_c(true);
 
@@ -571,7 +571,7 @@ void MainWindow::prorada_prekidaca_c(bool prorada){
 
         ui->textBrowser->append("DV-C: Polje ukljuceno");
     } else {
-        ui->textBrowser->append("DV-C: Iskljucujem polje...");
+        ui->textBrowser->append("DV-C: se iskljucuje...");
         prekidac_gumb_c(false);
 
         rastavljac_uzemljenja_gumb_c(true);
@@ -635,6 +635,7 @@ void MainWindow::on_PrekidacA_clicked()
 {
     if(zastita.getStanje()){
         ui->textBrowser->append("DV-B: Nije moguce ukljuciti polje dok je zastita aktivna");
+        ui->textBrowser->append("DV-B: Iskljucite zastitu");
         return;
     }
     enable_dv_c(false);
@@ -659,7 +660,8 @@ void MainWindow::on_SRastavljacA1_clicked()
 {
     enable_dv_c(false);
     if(p_b.getStanje()){
-        ui->textBrowser->append("DV-B: Nije moguce upaliti glavni sabirnicki rastavljac ako je prekidac ukljucen");
+        ui->textBrowser->append("DV-B: Prekidac ukljucen - Nije moguce upaliti glavni sabirnicki rastavljac");
+        ui->textBrowser->append("DV-C: Iskljucite prekidac");
         enable_dv_c(true);
         return;
     }
@@ -677,7 +679,8 @@ void MainWindow::on_SRastavljacA2_clicked()
 {
     enable_dv_c(false);
     if(p_b.getStanje()){
-        ui->textBrowser->append("DV-B: Nije moguce upaliti pomocni sabirnicki rastavljac ako je prekidac ukljucen");
+        ui->textBrowser->append("DV-B: Prekidac ukljucen - Nije moguce upaliti pomocni sabirnicki rastavljac");
+        ui->textBrowser->append("DV-C: Iskljucite prekidac");
         enable_dv_c(true);
         return;
     }
@@ -695,7 +698,8 @@ void MainWindow::on_LRastavljacA_clicked()
 {
     enable_dv_c(false);
     if(p_b.getStanje()){
-        ui->textBrowser->append("DV-B: Nije moguce upaliti linijski rastavljac ako je prekidac ukljucen");
+        ui->textBrowser->append("DV-B: Prekidac ukljucen - Nije moguce upaliti linijski rastavljac");
+        ui->textBrowser->append("DV-C: Iskljucite prekidac");
         enable_dv_c(true);
         return;
     }
@@ -727,7 +731,8 @@ void MainWindow::on_APU_B_clicked()
 void MainWindow::on_PrekidacB_clicked()
 {
     if(zastita.getStanje()){
-        ui->textBrowser->append("DV-C: Nije moguce ukljuciti polje dok je zastita aktivna");
+        ui->textBrowser->append("DV-C: Zastita aktivna - Nije moguce ukljuciti polje");
+        ui->textBrowser->append("DV-C: Iskljucite zastitu");
         return;
     }
     enable_dv_c(false);
@@ -752,7 +757,8 @@ void MainWindow::on_SRastavljacB_clicked()
 {
     enable_dv_c(false);
     if(p_c.getStanje()){
-        ui->textBrowser->append("DV-C: Nije moguce upaliti sabirnicki rastavljac ako je prekidac ukljucen");
+        ui->textBrowser->append("DV-C: Prekidac ukljucen - Nije moguce upaliti sabirnicki rastavljac");
+        ui->textBrowser->append("DV-C: Iskljucite prekidac");
         enable_dv_c(true);
         return;
     }
@@ -770,7 +776,8 @@ void MainWindow::on_LRastavljacB_clicked()
 {
     enable_dv_c(false);
     if(p_c.getStanje()){
-        ui->textBrowser->append("DV-C: Nije moguce upaliti linijski rastavljac ako je prekidac ukljucen");
+        ui->textBrowser->append("DV-C: Prekidac ukljucen - Nije moguce upaliti linijski rastavljac");
+        ui->textBrowser->append("DV-C: Iskljucite prekidac");
         enable_dv_c(true);
         return;
     }

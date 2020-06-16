@@ -557,7 +557,7 @@
      <string>Pomocna sabirnica s2</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="APUA">
+   <widget class="QPushButton" name="APU_B">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -4731,7 +4731,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="APUB">
+   <widget class="QPushButton" name="APU_C">
     <property name="geometry">
      <rect>
       <x>800</x>
@@ -18487,7 +18487,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="signali_a">
+   <widget class="QTextBrowser" name="signali_b">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -18505,7 +18505,7 @@
      </url>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="signali_b">
+   <widget class="QTextBrowser" name="signali_c">
     <property name="geometry">
      <rect>
       <x>690</x>
@@ -18520,7 +18520,7 @@
      </url>
     </property>
    </widget>
-   <widget class="QPushButton" name="prikaz_signala_a">
+   <widget class="QPushButton" name="prikaz_signala_b">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -18597,7 +18597,7 @@
      <string>DV-B</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="prikaz_signala_b">
+   <widget class="QPushButton" name="prikaz_signala_c">
     <property name="geometry">
      <rect>
       <x>800</x>
@@ -18984,13 +18984,13 @@
    <zorder>LinijaR1</zorder>
    <zorder>LinijaSR1</zorder>
    <zorder>pomsabirnica</zorder>
-   <zorder>APUA</zorder>
+   <zorder>APU_B</zorder>
    <zorder>LinijaLL</zorder>
    <zorder>SRastavljacA1</zorder>
    <zorder>SRastavljacB</zorder>
    <zorder>promjenaUpravljanja</zorder>
    <zorder>LinijaRP1</zorder>
-   <zorder>APUB</zorder>
+   <zorder>APU_C</zorder>
    <zorder>RUzemljenjaB</zorder>
    <zorder>glsabirnica</zorder>
    <zorder>LRastavljacB</zorder>
@@ -19003,10 +19003,10 @@
    <zorder>upravljanje</zorder>
    <zorder>textBrowser</zorder>
    <zorder>PrekidacB</zorder>
-   <zorder>prikaz_signala_a</zorder>
    <zorder>prikaz_signala_b</zorder>
+   <zorder>prikaz_signala_c</zorder>
+   <zorder>signali_c</zorder>
    <zorder>signali_b</zorder>
-   <zorder>signali_a</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

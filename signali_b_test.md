@@ -1,57 +1,57 @@
-Prekidac: komanda: isklop
+TS-B: 110 kW: DV-B: Prekidac: komanda: isklop
 
-Prekidac: komanda: uklop
+TS-B: 110 kW: DV-B: Prekidac: komanda: uklop
 
-Prekidac: stanje: iskljucen
+TS-B: 110 kW: DV-B: Prekidac: stanje: iskljucen
 
-Prekidac: stanje: ukljucen
+TS-B: 110 kW: DV-B: Prekidac: stanje: ukljucen
 
-Prekidac: upravljanje: daljinsko
+TS-B: 110 kW: DV-B: Prekidac: upravljanje: daljinsko
 
-Prekidac: upravljanje: lokalno
-
-
-Sabirnicki rastavljac s1: komanda: isklop
-
-Sabirnicki rastavljac s1: komanda: uklop
-
-Sabirnicki rastavljac s1: stanje: ukljucen
-
-Sabirnicki rastavljac s1: stanje: iskljucen
+TS-B: 110 kW: DV-B: Prekidac: upravljanje: lokalno
 
 
-Sabirnicki rastavljac s2: komanda: isklop
+TS-B: 110 kW: DV-B: Sabirnicki rastavljac s1: komanda: isklop
 
-Sabirnicki rastavljac s2: komanda: uklop
+TS-B: 110 kW: DV-B: Sabirnicki rastavljac s1: komanda: uklop
 
-Sabirnicki rastavljac s2: stanje: ukljucen
+TS-B: 110 kW: DV-B: Sabirnicki rastavljac s1: stanje: ukljucen
 
-Sabirnicki rastavljac s2: stanje: iskljucen
-
-
-Linijski rastavljac: komanda: isklop
-
-Linijski rastavljac: komanda: uklop
-
-Linijski rastavljac: stanje: ukljucen
-
-Linijski rastavljac: stanje: iskljucen
+TS-B: 110 kW: DV-B: Sabirnicki rastavljac s1: stanje: iskljucen
 
 
-Rastavljac uzemljenja: stanje: ukljucen
+TS-B: 110 kW: DV-B: Sabirnicki rastavljac s2: komanda: isklop
 
-Rastavljac uzemljenja: stanje: iskljucen
+TS-B: 110 kW: DV-B: Sabirnicki rastavljac s2: komanda: uklop
 
+TS-B: 110 kW: DV-B: Sabirnicki rastavljac s2: stanje: ukljucen
 
-Zastita: komanda: iskljucenje
-
-Zastita: komanda: ukljucenje
-
-Zastita: APU ukljucenje: prorada
-
-Zastita: APU ukljucenje: prestanak
+TS-B: 110 kW: DV-B: Sabirnicki rastavljac s2: stanje: iskljucen
 
 
-APU: blokada: prorada
+TS-B: 110 kW: DV-B: Linijski rastavljac: komanda: isklop
 
-APU: blokada: prestanak
+TS-B: 110 kW: DV-B: Linijski rastavljac: komanda: uklop
+
+TS-B: 110 kW: DV-B: Linijski rastavljac: stanje: ukljucen
+
+TS-B: 110 kW: DV-B: Linijski rastavljac: stanje: iskljucen
+
+
+TS-B: 110 kW: DV-B: Rastavljac uzemljenja: stanje: ukljucen
+
+TS-B: 110 kW: DV-B: Rastavljac uzemljenja: stanje: iskljucen
+
+
+TS-B: 110 kW: DV-B: Zastita: komanda: iskljucenje
+
+TS-B: 110 kW: DV-B: Zastita: komanda: ukljucenje
+
+TS-B: 110 kW: DV-B: Zastita: APU ukljucenje: prorada
+
+TS-B: 110 kW: DV-B: Zastita: APU ukljucenje: prestanak
+
+
+TS-B: 110 kW: DV-B: APU: blokada: prorada
+
+TS-B: 110 kW: DV-B: APU: blokada: prestanak

@@ -1,48 +1,48 @@
-Prekidac: komanda: isklop
+TS-C: 110 kW: DV-C: Prekidac: komanda: isklop
 
-Prekidac: komanda: uklop
+TS-C: 110 kW: DV-C: Prekidac: komanda: uklop
 
-Prekidac: stanje: iskljucen
+TS-C: 110 kW: DV-C: Prekidac: stanje: iskljucen
 
-Prekidac: stanje: ukljucen
+TS-C: 110 kW: DV-C: Prekidac: stanje: ukljucen
 
-Prekidac: upravljanje: daljinsko
+TS-C: 110 kW: DV-C: Prekidac: upravljanje: daljinsko
 
-Prekidac: upravljanje: lokalno
-
-
-Sabirnicki rastavljac: komanda: isklop
-
-Sabirnicki rastavljac: komanda: uklop
-
-Sabirnicki rastavljac: stanje: ukljucen
-
-Sabirnicki rastavljac: stanje: iskljucen
+TS-C: 110 kW: DV-C: Prekidac: upravljanje: lokalno
 
 
-Linijski rastavljac: komanda: isklop
+TS-C: 110 kW: DV-C: Sabirnicki rastavljac: komanda: isklop
 
-Linijski rastavljac: komanda: uklop
+TS-C: 110 kW: DV-C: Sabirnicki rastavljac: komanda: uklop
 
-Linijski rastavljac: stanje: ukljucen
+TS-C: 110 kW: DV-C: Sabirnicki rastavljac: stanje: ukljucen
 
-Linijski rastavljac: stanje: iskljucen
-
-
-Rastavljac uzemljenja: stanje: ukljucen
-
-Rastavljac uzemljenja: stanje: iskljucen
+TS-C: 110 kW: DV-C: Sabirnicki rastavljac: stanje: iskljucen
 
 
-Zastita: komanda: iskljucenje
+TS-C: 110 kW: DV-C: Linijski rastavljac: komanda: isklop
 
-Zastita: komanda: ukljucenje
+TS-C: 110 kW: DV-C: Linijski rastavljac: komanda: uklop
 
-Zastita: APU ukljucenje: prorada
+TS-C: 110 kW: DV-C: Linijski rastavljac: stanje: ukljucen
 
-Zastita: APU ukljucenje: prestanak
+TS-C: 110 kW: DV-C: Linijski rastavljac: stanje: iskljucen
 
 
-APU: blokada: prorada
+TS-C: 110 kW: DV-C: Rastavljac uzemljenja: stanje: ukljucen
 
-APU: blokada: prestanak
+TS-C: 110 kW: DV-C: Rastavljac uzemljenja: stanje: iskljucen
+
+
+TS-C: 110 kW: DV-C: Zastita: komanda: iskljucenje
+
+TS-C: 110 kW: DV-C: Zastita: komanda: ukljucenje
+
+TS-C: 110 kW: DV-C: Zastita: APU ukljucenje: prorada
+
+TS-C: 110 kW: DV-C: Zastita: APU ukljucenje: prestanak
+
+
+TS-C: 110 kW: DV-C: APU: blokada: prorada
+
+TS-C: 110 kW: DV-C: APU: blokada: prestanak

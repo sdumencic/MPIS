@@ -41,6 +41,7 @@ QString path_c = "./signali_c.txt";
 QFile signali_c(path_c);
 bool s_b = false;
 bool s_c = false;
+bool s_signali = false; //////////////////////////////////
 
 
 void delay(unsigned int ms){
@@ -84,6 +85,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->signali_b->setVisible(false);
     ui->signali_c->setVisible(false);
+    ui->textBrowser->setVisible(false); //////////////////////
 
     read_file_signali_b();
     read_file_signali_c();
@@ -99,7 +101,7 @@ MainWindow::~MainWindow()
 void MainWindow::glavni_sabirnicki_rastavljac_gumb_b(bool prorada){
     QPalette p;
     if(prorada){
-        ui->textBrowser->append("DV-B: Glavni sabirnicki rastavljac ukljucen");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: Glavni sabirnicki rastavljac ukljucen");
         p.setColor(QPalette::Button, Qt::green);
         ui->SRastavljacA1->setPalette(p);
         linija_glavna_sabirnica_glavni_rastavljac_b(true);
@@ -108,7 +110,7 @@ void MainWindow::glavni_sabirnicki_rastavljac_gumb_b(bool prorada){
             linija_rastavljaci_prekidac_b(true);
         }
     } else {
-        ui->textBrowser->append("DV-B: Glavni sabirnicki rastavljac iskljucen");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: Glavni sabirnicki rastavljac iskljucen");
         p.setColor(QPalette::Button, Qt::red);
         ui->SRastavljacA1->setPalette(p);
         linija_glavna_sabirnica_glavni_rastavljac_b(false);
@@ -123,7 +125,7 @@ void MainWindow::glavni_sabirnicki_rastavljac_gumb_b(bool prorada){
 void MainWindow::pomocni_sabirnicki_rastavljac_gumb_b(bool prorada){
     QPalette p;
     if(prorada){
-        ui->textBrowser->append("DV-B: Pomocni sabirnicki rastavljac ukljucen");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: Pomocni sabirnicki rastavljac ukljucen");
         p.setColor(QPalette::Button, Qt::green);
         ui->SRastavljacA2->setPalette(p);
         linija_pomocna_sabirnica_pomocni_rastavljac_b(true);
@@ -132,7 +134,7 @@ void MainWindow::pomocni_sabirnicki_rastavljac_gumb_b(bool prorada){
             linija_rastavljaci_prekidac_b(true);
         }
     } else {
-        ui->textBrowser->append("DV-B: Pomocni sabirnicki rastavljac iskljucen");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: Pomocni sabirnicki rastavljac iskljucen");
         p.setColor(QPalette::Button, Qt::red);
         ui->SRastavljacA2->setPalette(p);
         linija_pomocna_sabirnica_pomocni_rastavljac_b(false);
@@ -147,12 +149,12 @@ void MainWindow::pomocni_sabirnicki_rastavljac_gumb_b(bool prorada){
 void MainWindow::rastavljac_uzemljenja_gumb_b(bool prorada){
     QPalette p;
     if(prorada){
-        ui->textBrowser->append("DV-B: Rastavljac uzemljenja ukljucen");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: Rastavljac uzemljenja ukljucen");
         p.setColor(QPalette::Button, Qt::green);
         ui->RUzemljenjaA->setPalette(p);
         linija_rastavljaca_uzemljenja_b(true);
     } else {
-        ui->textBrowser->append("DV-B: Rastavljac uzemljenja iskljucen");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: Rastavljac uzemljenja iskljucen");
         p.setColor(QPalette::Button, Qt::red);
         ui->RUzemljenjaA->setPalette(p);
         linija_rastavljaca_uzemljenja_b(false);
@@ -163,11 +165,11 @@ void MainWindow::rastavljac_uzemljenja_gumb_b(bool prorada){
 void MainWindow::prekidac_gumb_b(bool prorada){
     QPalette p;
     if(prorada){
-        ui->textBrowser->append("DV-B: Prekidac ukljucen");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: Prekidac ukljucen");
         p.setColor(QPalette::Button, Qt::green);
         ui->PrekidacA->setPalette(p);
     } else {
-        ui->textBrowser->append("DV-B: Prekidac iskljucen");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: Prekidac iskljucen");
         p.setColor(QPalette::Button, Qt::red);
         ui->PrekidacA->setPalette(p);
     }
@@ -177,7 +179,7 @@ void MainWindow::prekidac_gumb_b(bool prorada){
 void MainWindow::linijski_rastavljac_gumb_b(bool prorada){
     QPalette p;
     if(prorada){
-        ui->textBrowser->append("DV-B: Linijski rastavljac ukljucen");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: Linijski rastavljac ukljucen");
         p.setColor(QPalette::Button, Qt::green);
         ui->LRastavljacA->setPalette(p);
         if(p_b.getStanje()){
@@ -188,7 +190,7 @@ void MainWindow::linijski_rastavljac_gumb_b(bool prorada){
             }
         }
     } else {
-        ui->textBrowser->append("DV-B: Linijski rastavljac iskljucen");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: Linijski rastavljac iskljucen");
         p.setColor(QPalette::Button, Qt::red);
         ui->LRastavljacA->setPalette(p);
         linija_prekidac_apu_b(false);
@@ -201,11 +203,11 @@ void MainWindow::linijski_rastavljac_gumb_b(bool prorada){
 void MainWindow::apu_gumb_b(bool prorada){
     QPalette p;
     if(prorada){
-        ui->textBrowser->append("DV-B: APU ukljucen");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: APU ukljucen");
         p.setColor(QPalette::Button, Qt::green);
         ui->APU_B->setPalette(p);
     } else {
-        ui->textBrowser->append("DV-B: APU iskljucen");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: APU iskljucen");
         p.setColor(QPalette::Button, Qt::red);
         ui->APU_B->setPalette(p);
     }
@@ -216,7 +218,7 @@ void MainWindow::apu_gumb_b(bool prorada){
 void MainWindow::sabirnicki_rastavljac_gumb_c(bool prorada){
     QPalette p;
     if(prorada){
-        ui->textBrowser->append("DV-C: Sabirnicki rastavljac ukljucen");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Sabirnicki rastavljac ukljucen");
         p.setColor(QPalette::Button, Qt::green);
         ui->SRastavljacB->setPalette(p);
         if(p_c.getStanje()){
@@ -224,7 +226,7 @@ void MainWindow::sabirnicki_rastavljac_gumb_c(bool prorada){
         }
         linija_sabirnica_rastavljac_c(true);
     } else {
-        ui->textBrowser->append("DV-C: Sabirnicki rastavljac iskljucen");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Sabirnicki rastavljac iskljucen");
         p.setColor(QPalette::Button, Qt::red);
         ui->SRastavljacB->setPalette(p);
         linija_sabirnica_rastavljac_c(false);
@@ -236,12 +238,12 @@ void MainWindow::sabirnicki_rastavljac_gumb_c(bool prorada){
 void MainWindow::rastavljac_uzemljenja_gumb_c(bool prorada){
     QPalette p;
     if(prorada){
-        ui->textBrowser->append("DV-C: Rastavljac uzemljenja ukljucen");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Rastavljac uzemljenja ukljucen");
         p.setColor(QPalette::Button, Qt::green);
         ui->RUzemljenjaB->setPalette(p);
         linija_rastavljaca_uzemljenja_c(true);
     } else {
-        ui->textBrowser->append("DV-C: Rastavljac uzemljenja iskljucen");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Rastavljac uzemljenja iskljucen");
         p.setColor(QPalette::Button, Qt::red);
         ui->RUzemljenjaB->setPalette(p);
         linija_rastavljaca_uzemljenja_c(false);
@@ -252,11 +254,11 @@ void MainWindow::rastavljac_uzemljenja_gumb_c(bool prorada){
 void MainWindow::prekidac_gumb_c(bool prorada){
     QPalette p;
     if(prorada){
-        ui->textBrowser->append("DV-C: Prekidac ukljucen");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Prekidac ukljucen");
         p.setColor(QPalette::Button, Qt::green);
         ui->PrekidacB->setPalette(p);
     } else {
-        ui->textBrowser->append("DV-C: Prekidac iskljucen");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Prekidac iskljucen");
         p.setColor(QPalette::Button, Qt::red);
         ui->PrekidacB->setPalette(p);
     }
@@ -266,7 +268,7 @@ void MainWindow::prekidac_gumb_c(bool prorada){
 void MainWindow::linijski_rastavljac_gumb_c(bool prorada){
     QPalette p;
     if(prorada){
-        ui->textBrowser->append("DV-C: Linijski rastavljac ukljucen");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Linijski rastavljac ukljucen");
         p.setColor(QPalette::Button, Qt::green);
         ui->LRastavljacB->setPalette(p);
         if(p_c.getStanje()){
@@ -275,7 +277,7 @@ void MainWindow::linijski_rastavljac_gumb_c(bool prorada){
             if(lr_b.getStanje()) linija_linijski_rastavljaci(true);
         }
     } else {
-        ui->textBrowser->append("DV-C: Linijski rastavljac iskljucen");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Linijski rastavljac iskljucen");
         p.setColor(QPalette::Button, Qt::red);
         ui->LRastavljacB->setPalette(p);
         linija_prekidac_apu_c(false);
@@ -288,11 +290,11 @@ void MainWindow::linijski_rastavljac_gumb_c(bool prorada){
 void MainWindow::apu_gumb_c(bool prorada){
     QPalette p;
     if(prorada){
-        ui->textBrowser->append("DV-C: APU ukljucen");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: APU ukljucen");
         p.setColor(QPalette::Button, Qt::green);
         ui->APU_C->setPalette(p);
     } else {
-        ui->textBrowser->append("DV-C: APU iskljucen");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: APU iskljucen");
         p.setColor(QPalette::Button, Qt::red);
         ui->APU_C->setPalette(p);
     }
@@ -493,7 +495,7 @@ void MainWindow::linija_linijski_rastavljaci(bool prorada){
 //prorada prekidaca
 void MainWindow::prorada_prekidaca_b(bool prorada){
     if(prorada){
-        ui->textBrowser->append("DV-B: se ukljucuje...");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: se ukljucuje...");
 
         prekidac_gumb_b(true);
 
@@ -525,9 +527,9 @@ void MainWindow::prorada_prekidaca_b(bool prorada){
         linija_apu_linijski_rastavljac_b(true);
         if(lr_c.getStanje()) linija_linijski_rastavljaci(true);
 
-        ui->textBrowser->append("DV-B: Polje ukljuceno");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: Polje ukljuceno");
     } else {
-        ui->textBrowser->append("DV-B: se iskljucuje...");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: se iskljucuje...");
 
         prekidac_gumb_b(false);
 
@@ -548,13 +550,13 @@ void MainWindow::prorada_prekidaca_b(bool prorada){
         linija_apu_linijski_rastavljac_b(false);
         linija_linijski_rastavljaci(false);
 
-        ui->textBrowser->append("DV-B: Polje iskljuceno");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: Polje iskljuceno");
     }
 }
 
 void MainWindow::prorada_prekidaca_c(bool prorada){
     if(prorada){
-        ui->textBrowser->append("DV-C: se ukljucuje...");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: se ukljucuje...");
 
         prekidac_gumb_c(true);
 
@@ -569,9 +571,9 @@ void MainWindow::prorada_prekidaca_c(bool prorada){
         linija_apu_linijski_rastavljac_c(true);
         if(lr_b.getStanje()) linija_linijski_rastavljaci(true);
 
-        ui->textBrowser->append("DV-C: Polje ukljuceno");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Polje ukljuceno");
     } else {
-        ui->textBrowser->append("DV-C: se iskljucuje...");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: se iskljucuje...");
         prekidac_gumb_c(false);
 
         rastavljac_uzemljenja_gumb_c(true);
@@ -584,7 +586,7 @@ void MainWindow::prorada_prekidaca_c(bool prorada){
         linija_prekidac_apu_c(false);
         linija_linijski_rastavljaci(false);
 
-        ui->textBrowser->append("DV-C: Polje iskljuceno");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Polje iskljuceno");
     }
 }
 
@@ -634,8 +636,8 @@ void MainWindow::enable_upravljanje(bool stanje){
 void MainWindow::on_PrekidacA_clicked()
 {
     if(zastita.getStanje()){
-        ui->textBrowser->append("DV-B: Nije moguce ukljuciti polje dok je zastita aktivna");
-        ui->textBrowser->append("DV-B: Iskljucite zastitu");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: Nije moguce ukljuciti polje dok je zastita aktivna");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: Iskljucite zastitu");
         return;
     }
     enable_dv_c(false);
@@ -653,15 +655,15 @@ void MainWindow::on_PrekidacA_clicked()
 
 void MainWindow::on_RUzemljenjaA_clicked()
 {
-    ui->textBrowser->append("DV-B: Nije moguce proizvoljno upravljati rastavljacem uzemljenja");
+    ui->textBrowser->append("TS-B: 110 kW: DV-B: Nije moguce proizvoljno upravljati rastavljacem uzemljenja");
 }
 
 void MainWindow::on_SRastavljacA1_clicked()
 {
     enable_dv_c(false);
     if(p_b.getStanje()){
-        ui->textBrowser->append("DV-B: Prekidac ukljucen - Nije moguce upaliti glavni sabirnicki rastavljac");
-        ui->textBrowser->append("DV-C: Iskljucite prekidac");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: Prekidac ukljucen - Nije moguce upaliti glavni sabirnicki rastavljac");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Iskljucite prekidac");
         enable_dv_c(true);
         return;
     }
@@ -679,8 +681,8 @@ void MainWindow::on_SRastavljacA2_clicked()
 {
     enable_dv_c(false);
     if(p_b.getStanje()){
-        ui->textBrowser->append("DV-B: Prekidac ukljucen - Nije moguce upaliti pomocni sabirnicki rastavljac");
-        ui->textBrowser->append("DV-C: Iskljucite prekidac");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: Prekidac ukljucen - Nije moguce upaliti pomocni sabirnicki rastavljac");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Iskljucite prekidac");
         enable_dv_c(true);
         return;
     }
@@ -698,8 +700,8 @@ void MainWindow::on_LRastavljacA_clicked()
 {
     enable_dv_c(false);
     if(p_b.getStanje()){
-        ui->textBrowser->append("DV-B: Prekidac ukljucen - Nije moguce upaliti linijski rastavljac");
-        ui->textBrowser->append("DV-C: Iskljucite prekidac");
+        ui->textBrowser->append("TS-B: 110 kW: DV-B: Prekidac ukljucen - Nije moguce upaliti linijski rastavljac");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Iskljucite prekidac");
         enable_dv_c(true);
         return;
     }
@@ -731,8 +733,8 @@ void MainWindow::on_APU_B_clicked()
 void MainWindow::on_PrekidacB_clicked()
 {
     if(zastita.getStanje()){
-        ui->textBrowser->append("DV-C: Zastita aktivna - Nije moguce ukljuciti polje");
-        ui->textBrowser->append("DV-C: Iskljucite zastitu");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Zastita aktivna - Nije moguce ukljuciti polje");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Iskljucite zastitu");
         return;
     }
     enable_dv_c(false);
@@ -750,15 +752,15 @@ void MainWindow::on_PrekidacB_clicked()
 
 void MainWindow::on_RUzemljenjaB_clicked()
 {
-    ui->textBrowser->append("DV-C: Nije moguce proizvoljno upravljati rastavljacem uzemljenja");
+    ui->textBrowser->append("TS-C: 110 kW: DV-C: Nije moguce proizvoljno upravljati rastavljacem uzemljenja");
 }
 
 void MainWindow::on_SRastavljacB_clicked()
 {
     enable_dv_c(false);
     if(p_c.getStanje()){
-        ui->textBrowser->append("DV-C: Prekidac ukljucen - Nije moguce upaliti sabirnicki rastavljac");
-        ui->textBrowser->append("DV-C: Iskljucite prekidac");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Prekidac ukljucen - Nije moguce upaliti sabirnicki rastavljac");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Iskljucite prekidac");
         enable_dv_c(true);
         return;
     }
@@ -776,8 +778,8 @@ void MainWindow::on_LRastavljacB_clicked()
 {
     enable_dv_c(false);
     if(p_c.getStanje()){
-        ui->textBrowser->append("DV-C: Prekidac ukljucen - Nije moguce upaliti linijski rastavljac");
-        ui->textBrowser->append("DV-C: Iskljucite prekidac");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Prekidac ukljucen - Nije moguce upaliti linijski rastavljac");
+        ui->textBrowser->append("TS-C: 110 kW: DV-C: Iskljucite prekidac");
         enable_dv_c(true);
         return;
     }
@@ -866,5 +868,27 @@ void MainWindow::on_prikaz_signala_c_clicked()
     } else {
         s_c = false;
         ui->signali_c->setVisible(false);
+    }
+}
+
+/*void MainWindow::on_prikaz_signala_clicked()
+{
+    if(!s_signali){
+        s_signali = true;
+        ui->textBrowser->setVisible(true);
+    } else {
+        s_signali = false;
+        ui->textBrowser->setVisible(false);
+    }
+}*/
+
+void MainWindow::on_prikazSignala_clicked()
+{
+    if(!s_signali){
+        s_signali = true;
+        ui->textBrowser->setVisible(true);
+    } else {
+        s_signali = false;
+        ui->textBrowser->setVisible(false);
     }
 }

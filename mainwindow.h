@@ -104,6 +104,10 @@ private slots:
 
     void on_prikaz_signala_c_clicked();
 
+    //void on_prikaz_signala_clicked(); ///////////////////
+
+    void on_prikazSignala_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

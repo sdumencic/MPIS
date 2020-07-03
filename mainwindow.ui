@@ -21299,9 +21299,9 @@
    <zorder>PrekidacB</zorder>
    <zorder>prikaz_signala_b</zorder>
    <zorder>prikaz_signala_c</zorder>
+   <zorder>prikazSignala</zorder>
    <zorder>signali_c</zorder>
    <zorder>signali_b</zorder>
-   <zorder>prikazSignala</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

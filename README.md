@@ -28,7 +28,7 @@ dalekovodno polje. Elementi koji se nalaze u DV su objekti, dakle instance klasa
 nasljeđivanja, nasljeđuju varijable i metode koje se nalaze u njihovim klasama.
 
 ## UML dijagram
-<img src="https://i.ibb.co/BjHRv8p/dijagram.png" alt="dijagram">
+<img src="images/1.png" alt="dijagram">
 
 ### Dalekovodno polje
 Klasa dalekovodno polje služi za prikaz dalekovodnih polja koje smo dobili zadane još u prvom zadatku,
@@ -76,5 +76,5 @@ uzemljenja.
 
 
 
-<img src="https://i.ibb.co/yNQytFc/mpis2.png" alt="mpis2">
-<img src="https://i.ibb.co/nwvbNy7/Screenshot-2020-12-28-MPIS-1920-zadatak4-grupa2-pdf.png" alt="Screenshot-2020-12-28-MPIS-1920-zadatak4-grupa2-pdf">
+<img src="images/2.png" alt="mpis">
+<img src="images/3.png" alt="mpis">
